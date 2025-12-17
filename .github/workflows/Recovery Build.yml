@@ -6,11 +6,11 @@ on:
       DEVICE_TREE_BRANCH:
         description: "Select device tree branch"
         required: true
-        default: 'main'
+        default: 'fox_12.1'
         type: choice
         options:
           - main
-          - test
+          - fox_12.1
           - crypto
 
 jobs:
@@ -22,10 +22,10 @@ jobs:
     env:
       SYNC_URL: https://gitlab.com/OrangeFox/sync.git
       MANIFEST_BRANCH: 12.1
-      DEVICE_TREE_URL: https://github.com/AzzyC/ofox_device_xiaomi_peridot
-      DEVICE_PATH: device/xiaomi/peridot
-      DEVICE_NAME: peridot
-      MAKEFILE_NAME: twrp_peridot
+      DEVICE_TREE_URL: https://gitlab.com/OrangeFox/device/android_device_samsung_a23
+      DEVICE_PATH: device/samsung/a23
+      DEVICE_NAME: a23
+      MAKEFILE_NAME: twrp_a23
       BUILD_TARGET: recovery
 
     steps:
